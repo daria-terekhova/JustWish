@@ -8,5 +8,7 @@
   "workspaces": [
     "./backend"
   ],
-  "scripts": {}
+  "scripts": {
+    "start-backend": "yarn workspace @just-wish/backend start:dev"
+  }
 }
