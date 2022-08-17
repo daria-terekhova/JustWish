@@ -6,9 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "workspaces": [
-    "./backend"
+    "./packages/*"
   ],
   "scripts": {
-    "start-backend": "yarn workspace @just-wish/backend start:dev"
+    "start-backend": "yarn workspace @just-wish/backend start:dev",
+    "build": "yarn workspaces run build"
   }
 }
