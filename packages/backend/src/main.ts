@@ -10,7 +10,10 @@ async function bootstrap() {
     .setDescription('API description')
     .setVersion('1.0')
     .build();
-  SwaggerModule.setup('api', app, SwaggerModule.createDocument(app, config));
+  
+  SwaggerModule.setup('api/swagger', app, SwaggerModule.createDocument(app, config));
+  
+  app.setGlobalPrefix('api');
 
   await app.listen(3000);
 }
