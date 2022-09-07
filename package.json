@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "start-backend": "yarn workspace @just-wish/backend start:dev",
+    "start-frontend": "yarn workspace @just-wish/frontend dev",
     "build": "yarn workspaces run build",
     "docker-build": "yarn build && docker build -t just-wish/backend ./packages/backend"
   }
