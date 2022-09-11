@@ -52,11 +52,6 @@
     "placementConstraints": [],
     "memory": "100",
     "taskRoleArn": null,
-    "compatibilities": [
-      "EXTERNAL",
-      "EC2"
-    ],
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:521739145517:task-definition/just-wish-backend-task:5",
     "family": "just-wish-backend-task",
     "requiresAttributes": [],
     "pidMode": null,
@@ -66,8 +61,6 @@
     "networkMode": null,
     "runtimePlatform": null,
     "cpu": "256",
-    "revision": 5,
-    "status": "ACTIVE",
     "inferenceAccelerators": null,
     "proxyConfiguration": null,
     "volumes": []
