@@ -1,0 +1,67 @@
+{
+    "ipcMode": null,
+    "executionRoleArn": null,
+    "containerDefinitions": [
+      {
+        "dnsSearchDomains": null,
+        "environmentFiles": null,
+        "logConfiguration": null,
+        "entryPoint": null,
+        "portMappings": [
+          {
+            "hostPort": 0,
+            "protocol": "tcp",
+            "containerPort": 3000
+          }
+        ],
+        "command": null,
+        "linuxParameters": null,
+        "cpu": 0,
+        "environment": [],
+        "resourceRequirements": null,
+        "ulimits": null,
+        "dnsServers": null,
+        "mountPoints": [],
+        "workingDirectory": null,
+        "secrets": null,
+        "dockerSecurityOptions": null,
+        "memory": 100,
+        "memoryReservation": null,
+        "volumesFrom": [],
+        "stopTimeout": null,
+        "image": "docker.io/akuchan/just-wish:fb00c998c3a3d6adbfbd099463a030cab2b8c05f",
+        "startTimeout": null,
+        "firelensConfiguration": null,
+        "dependsOn": null,
+        "disableNetworking": null,
+        "interactive": null,
+        "healthCheck": null,
+        "essential": true,
+        "links": null,
+        "hostname": null,
+        "extraHosts": null,
+        "pseudoTerminal": null,
+        "user": null,
+        "readonlyRootFilesystem": null,
+        "dockerLabels": null,
+        "systemControls": null,
+        "privileged": null,
+        "name": "just-wish-container-definition"
+      }
+    ],
+    "placementConstraints": [],
+    "memory": "100",
+    "taskRoleArn": null,
+    "family": "just-wish-backend-task",
+    "requiresAttributes": [],
+    "pidMode": null,
+    "requiresCompatibilities": [
+      "EC2"
+    ],
+    "networkMode": null,
+    "runtimePlatform": null,
+    "cpu": "256",
+    "inferenceAccelerators": null,
+    "proxyConfiguration": null,
+    "volumes": []
+  }
