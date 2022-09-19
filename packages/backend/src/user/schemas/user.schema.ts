@@ -2,21 +2,18 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { ApiProperty } from "@nestjs/swagger";
 import { Document } from "mongoose";
 
-export type UserDocument = User & Document
+export type UserDocument = UserSchemaClass & Document
 
 @Schema()
-export class User {
-    @ApiProperty()
+export class UserSchemaClass {
     @Prop({required: true})
     username: string;
 
-    @ApiProperty()
     @Prop({required: true})
     password: string;
 
-    @ApiProperty({required: false})
     @Prop()
     nameToShow: string;
 }
 
-export const UserSchema = SchemaFactory.createForClass(User)
+export const UserSchema = SchemaFactory.createForClass(UserSchemaClass)

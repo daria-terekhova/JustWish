@@ -1,26 +1,27 @@
-import { Body, Controller, Get, HttpCode, Param, Put } from '@nestjs/common';
-import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
-import { User } from './schemas/user.schema';
+import { Body, Controller, Get, HttpCode, Param, Put, Type } from '@nestjs/common';
+import { ApiBadRequestResponse, ApiConflictResponse, ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
+import { UserClass } from './userClass';
 import { UserService } from './user.service';
+import { Success } from 'src/types';
 
 @ApiTags('User')
 @Controller('user')
 export class UserController {
   constructor (private readonly userService: UserService) {
   }
-
-  @Get(':id')
-  userInfo(@Param('id') id: string): Promise<User> {
-    return this.userService.getUserByUsername(id)
-  }
   
   @Put()
   @HttpCode(201)
   @ApiCreatedResponse({
-    description: 'The record has been successfully created.',
-    type: User,
+    description: 'The record has been successfully created. Body of type Success<undefined> from common types'
   })
-  addUser(@Body() user: User): Promise<User> {
+  @ApiConflictResponse({
+    description: 'User already exists. Body of type Error from common types'
+  })
+  @ApiBadRequestResponse({
+    description: "payload doesn't match the format"
+  })
+  addUser(@Body() user: UserClass): Promise<Success<undefined>> {
     return this.userService.createUser(user)
   }
 }
