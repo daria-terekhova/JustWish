@@ -1,0 +1,11 @@
+{
+  "name": "@just-wish/types",
+  "version": "1.0.0",
+  "types": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": " ",
+    "start": " ",
+    "lint": " "
+  }
+}

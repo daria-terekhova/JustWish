@@ -2,7 +2,7 @@ import { Body, Controller, Get, HttpCode, Param, Put, Type } from '@nestjs/commo
 import { ApiBadRequestResponse, ApiConflictResponse, ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { UserClass } from './userClass';
 import { UserService } from './user.service';
-import { Success } from 'src/types';
+import { Success } from '@just-wish/types';
 
 @ApiTags('User')
 @Controller('user')

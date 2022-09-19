@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEmail, IsNotEmpty } from "class-validator";
-import { User } from "src/types";
+import { User } from "@just-wish/types";
 
 export class UserClass implements User {
     @ApiProperty()
